@@ -104,14 +104,29 @@ layout: default
                 <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
                 &lt;!&ndash; 网易云跟帖 评论框 end &ndash;&gt;
                 {% endif %}-->
-                <div id="SOHUCS"></div>
+                <div id="SOHUCS" sid="<%= page.title %>"></div>
+                <script>
+                    (function(){
+                        var appid = 'cytLUTHlH',
+                            conf = '0ac609326fe33c64a732b9c3953ab593';
+                        var doc = document,
+                            s = doc.createElement('script'),
+                            h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+                        s.type = 'text/javascript';
+                        s.charset = 'utf-8';
+                        s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+                        h.insertBefore(s,h.firstChild);
+                        window.SCS_NO_IFRAME = true;
+                    })()
+                </script>
+                <!--<div id="SOHUCS"></div>
                 <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
                 <script type="text/javascript">
                     window.changyan.api.config({
                         appid: 'cytLUTHlH',
                         conf: '0ac609326fe33c64a732b9c3953ab593'
                     });
-                </script>
+                </script>-->
                 <!--<script>
                     (function(){
                         var appid = '你的APP ID',
