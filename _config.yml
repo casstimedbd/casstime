@@ -53,7 +53,7 @@ kramdown:
 
 
 # Disqus settings
-disqus_username: casstime_disqus
+disqus_username: casstime
 
 # Netease settings
 netease_comment: false
