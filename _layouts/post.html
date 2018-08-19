@@ -141,7 +141,7 @@ layout: default
                         window.SCS_NO_IFRAME = true;
                     })()
                 </script>-->
-                <div id="gitalk-container"></div>
+                <!--<div id="gitalk-container"></div>
                 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
                 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
                 <script>
@@ -155,6 +155,20 @@ layout: default
                         distractionFreeMode: false  // Facebook-like distraction free mode
                     })
                     gitalk.render('gitalk-container')
+                </script>-->
+                <div id="container"></div>
+                <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+                <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+                <script>
+                    var gitment = new Gitment({
+                        owner: 'casstimedbd',
+                        repo: 'casstimedbd_comment',
+                        oauth: {
+                            client_id: 'c40e680bd60943a20bf2',
+                            client_secret: '6cd95ddb15d7610faa19b380e31de63081ae4d2e',
+                        },
+                    })
+                    gitment.render('container')
                 </script>
             </div>
 
