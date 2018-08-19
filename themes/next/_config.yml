@@ -811,3 +811,15 @@ images: images
 
 # Theme version
 version: 5.1.4
+
+gitalk:
+  enable: true
+  githubID: casstimedbd  
+  # 例：asdfv1929   
+  repo: casstimedbd.github.io   
+  # 例：asdfv1929.github.io
+  ClientID: 650721ecedd7b31de970
+  ClientSecret: 17c8ed80429567f25a0774d41359165ddb13cc8f
+  adminUser: casstimedbd 
+  #指定可初始化评论账户
+  distractionFreeMode: true
