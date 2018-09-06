@@ -89,6 +89,20 @@ layout: default
                     </li>
                     {% endif %}
                 </ul>
+                <div id="container"></div>
+                <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+                <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+                <script>
+                    var gitment = new Gitment({
+                        owner: 'casstimedbd',
+                        repo: 'https://github.com/casstimedbd/casstimedbd_comment.git',
+                        oauth: {
+                            client_id: 'c40e680bd60943a20bf2',
+                            client_secret: '6cd95ddb15d7610faa19b380e31de63081ae4d2e',
+                        },
+                    })
+                    gitment.render('container')
+                </script>
             </div>
 
             <!-- Side Catalog Container -->
@@ -148,7 +162,7 @@ layout: default
 
 
 
-{% if site.disqus_username %}
+<!--{% if site.disqus_username %}
 &lt;!&ndash; disqus 公共JS代码 start (一个网页只需插入一次) &ndash;&gt;
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
@@ -163,7 +177,7 @@ layout: default
     })();
 </script>
 &lt;!&ndash; disqus 公共JS代码 end &ndash;&gt;
-{% endif %}-->
+{% endif %}&ndash;&gt;-->
 
 <!--高速版-->
 
