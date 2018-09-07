@@ -93,15 +93,30 @@ layout: default
                 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
                 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
                 <script>
-                    var gitment = new Gitment({
+                    function renderGitment(){
+                    var gitment = new Gitmint({
+                        id: '<%= page.date %>',
                         owner: 'casstimedbd',
-                        repo: 'https://github.com/casstimedbd/casstimedbd_comment.git',
+                        repo: 'casstimedbd_comment',
+                        lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
                         oauth: {
-                            client_id: 'c40e680bd60943a20bf2',
                             client_secret: '6cd95ddb15d7610faa19b380e31de63081ae4d2e',
-                        },
-                    })
-                    gitment.render('container')
+                            client_id: 'c40e680bd60943a20bf2'
+                        }});
+                    gitment.render('gitment-container');
+                  }
+                    
+                  renderGitment();
+                    
+//                     var gitment = new Gitment({
+//                         owner: 'casstimedbd',
+//                         repo: 'https://github.com/casstimedbd/casstimedbd_comment.git',
+//                         oauth: {
+//                             client_id: 'c40e680bd60943a20bf2',
+//                             client_secret: '6cd95ddb15d7610faa19b380e31de63081ae4d2e',
+//                         },
+//                     })
+//                     gitment.render('container')
                 </script>
             </div>
 
