@@ -99,7 +99,7 @@ layout: default
                 <script>
                     function renderGitment(){
                     var gitment = new Gitmint({
-                        id: '<%= page.date %>',
+                        id: '{{page.id}}',
                         owner: 'casstimedbd',
                         repo: 'casstimedbd_comment',
                         lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
